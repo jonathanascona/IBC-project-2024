@@ -1,25 +1,21 @@
 import streamlit as st
-import numpy as np
-import pandas as pd
-import openpyxl
 
-# Set page title and layout
-st.set_page_config(page_title='IBC Data Explorer Dashboard', page_icon='📊', layout='wide')
+# Title of the app
+st.title("IBC Business Tracker")
 
-# Sidebar navigation
-st.sidebar.title("Navigation")
-page = st.sidebar.radio("Go to", ["Home", "Sales", "Traffic", "Manage"])
+# Description
+st.write("Welcome to your Streamlit project! Add your components here.")
 
-# Page routing
-if page == "Home":
-    import page.home as home
-    home.app()
-elif page == "Sales":
-    import page.sales as sales
-    sales.app()
-elif page == "Traffic":
-    import page.traffic as traffic
-    traffic.app()
-elif page == "Manage":
-    import page.manage as manage
-    manage.app()
+# Example: Placeholder for future components
+placeholder = st.empty()
+
+# Sidebar example
+st.sidebar.title("Sidebar")
+st.sidebar.write("This is where you can add controls, filters, etc.")
+
+# Footer or any extra text
+st.text("Your project footer or additional information here.")
+
+# Instructions for running the app
+st.write("To run this app, use the following command in your terminal or command prompt:")
+st.code('streamlit run streamlit_app.py')
